@@ -33,5 +33,21 @@ namespace TesteXUnit
             //assert
             Assert.Equal(rNum, resultado);
         }
+
+        [Theory]
+
+
+        [InlineData(90, 160, 32.5)]
+        [InlineData(50, 170, 17.3)]
+        [InlineData(73, 166, 26.5)]
+        [InlineData(75, 183, 22.4)]
+
+        public void CalcImc(double kg, double cm, double rNum)
+        {
+            var resultado = Calculadoraa.CalcularImc(kg, cm);
+
+            Assert.Equal(rNum, resultado);
+        }
+
     }
 }
